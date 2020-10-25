@@ -25,14 +25,16 @@ export default function Home({ recepten }) {
         </div>
         </div>
         
-                
+      
                   
-                    <div className="justify-center   lg, md:flex  ">
+          <div className="  lg, md:flex  row">
+            
           {recepten.results.map( (recept) => (
-            <div className= " flex justify-center items-center w-1/2 " key={recept.uid}>
+            
+            <div className= " flex justify-center items-center w-1/3   " key={recept.uid}>
             <Link href={`recept/${recept.uid}`}>
-            <div className="max-w-sm rounded overflow-hidden shadow-lg hover" > 
-            <img className="w-45 h-45" src={recept.data.image.url} alt=""/>
+            <div className=" rounded bg-yellow border overflow-hidden  hover:shadow-2xl cursor-pointer" > 
+            <img className="w-64 h-64 object-cover object-center" src={recept.data.image.url} alt=""/>
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2"><h1>{RichText.render ( recept.data.title)}</h1></div>
               <p class="text-gray-700 text-base">
@@ -42,6 +44,7 @@ export default function Home({ recepten }) {
             
           </div>
           </Link>
+          
           </div>
           ))}
           </div>
