@@ -16,29 +16,29 @@ export default function Home({ recepten }) {
       </Head>
 
       <Layout>
+        
         <div className="row  ">
           <div className="text-center">
-        <h1 className=" text-2xl uppercase font-bold opacity-50 my-10 ml-24 flex-col ">
-         Welkom! op de 
-         
+        <h1 className=" text-5xl  font-bold  my-10  flex-col ">
+        We create recipes that make people happy
         </h1>
         </div>
         </div>
-        
       
                   
-          <div className="  lg, md:flex  row">
+          <div className="  lg:flex  flex-col  lg:flex-row">
             
           {recepten.results.map( (recept) => (
             
-            <div className= " flex justify-center items-center w-1/3   " key={recept.uid}>
+            <div className= " flex justify-center   w-full py-8" key={recept.uid}>
             <Link href={`recept/${recept.uid}`}>
-            <div className=" rounded bg-yellow border overflow-hidden  hover:shadow-2xl cursor-pointer" > 
+            <div className="  rounded  borders border-solid border-green-500 border-opacity-25 overflow-hidden w-64 hover:bg-blue-800 hover:shadow-2xl  cursor-pointer" > 
             <img className="w-64 h-64 object-cover object-center" src={recept.data.image.url} alt=""/>
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2"><h1>{RichText.render ( recept.data.title)}</h1></div>
-              <p class="text-gray-700 text-base">
+              <div className="font-bold  text-xl mb-2"><h1>{RichText.render ( recept.data.title)}</h1></div>
+              <p class="  text-base">
               <p>{RichText.render ( recept.data.description)}</p>
+              <p>{RichText.render ( recept.data.ingredienten.ingredient)}</p>
               </p>
             </div>
             
