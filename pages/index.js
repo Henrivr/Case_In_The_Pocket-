@@ -32,13 +32,13 @@ export default function Home({ recepten }) {
             
             <div className= " flex justify-center   w-full py-8" key={recept.uid}>
             <Link href={`recept/${recept.uid}`}>
-            <div className="  rounded  borders border-solid border-green-500 border-opacity-25 overflow-hidden w-64 hover:bg-blue-800 hover:shadow-2xl  cursor-pointer" > 
+            <div className="    borders w-64   rounded   overflow-hidden  hover:bg-blue-800 hover:shadow-2xl  cursor-pointer" > 
             <img className="w-64 h-64 object-cover object-center" src={recept.data.image.url} alt=""/>
             <div className="px-6 py-4">
               <div className="font-bold  text-xl mb-2"><h1>{RichText.render ( recept.data.title)}</h1></div>
               <p class="  text-base">
               <p>{RichText.render ( recept.data.description)}</p>
-              <p>{RichText.render ( recept.data.ingredienten.ingredient)}</p>
+              
               </p>
             </div>
             
@@ -58,7 +58,7 @@ export default function Home({ recepten }) {
     const recepten = await Client().query(
       Prismic.Predicates.at("document.type", "recept")
     );
-    console.log(recepten);
+  
     return{
       props : {
         recepten : recepten,

@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 const Layout = ({children}) => (
- <div>
+ <div >
 
   <Header/>
   <div className="container mx-auto" >

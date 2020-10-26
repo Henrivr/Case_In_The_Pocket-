@@ -12,6 +12,13 @@ body {
   
   
 }
+.recept-foto{
+  height: 400px;
+  width: 400px;
+}
+.borders:hover img{
+  opacity: 75%;
+}
 a {
   color: inherit;
   text-decoration: none;
