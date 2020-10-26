@@ -16,7 +16,7 @@ export default function Recept({recept, ingredienten, recepten}){
 
 <div className="flex flex-col lg:flex-row ">
     <div className=" lg:w-2/3 sm:w-full p-4 items-center ">
-    <img className=" w-full rounded " src={recept.data.image.url} alt=""/>
+    <img className="  rounded w-full" src={recept.data.image.url} alt=""/>
     <h1 className="my-5 text-5xl text-center">Bereiding</h1>
     <p className=" bg-blue-500 rounded-2xl p-4"> {RichText.render ( recept.data.bereiding)}</p>
     </div>
